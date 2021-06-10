@@ -39,5 +39,6 @@ nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 "manage extensions.
 nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
 
+Plug 'sbdchd/neoformat'
 " All plugins must be called before here
 call plug#end()
