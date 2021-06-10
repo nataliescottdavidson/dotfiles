@@ -40,5 +40,7 @@ nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
 
 Plug 'sbdchd/neoformat'
+" If you have nodejs and yarn
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 " All plugins must be called before here
 call plug#end()
