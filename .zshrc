@@ -53,3 +53,4 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim" 
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+PROMPT=${PROMPT/\%c/\%~}
