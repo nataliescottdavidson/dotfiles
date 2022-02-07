@@ -33,6 +33,7 @@ Plug 'junegunn/fzf.vim'
 map ; :Files<CR>
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
+Plug 'ervandew/supertab'
 
 "show all diagnostics.
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
