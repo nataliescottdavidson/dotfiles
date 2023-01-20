@@ -1,15 +1,12 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# prevent duplicates in path
+typeset -U path
+
+# - - always enable FIPS client in every new session
+export OPENSSL_FIPS=1
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="rrplusfullpathinprompt"
-
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -73,3 +70,15 @@ export GONOSUMDB="*"
 export GOCACHE="/Users/ndavidson/Library/Caches/go-build"
 export GOMODCACHE="/Users/ndavidson/go/pkg/mod"
 export GOAMD64="v1"
+
+# OpenSSL
+export PATH="/opt/homebrew/opt/openssl@1.0/bin:$PATH"
+ 
+# For compilers to find openssl@1.0
+export LDFLAGS="-L/opt/homebrew/opt/openssl@1.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.0/include"
+export RUBY_CFLAGS="-DUSE_FFI_CLOSURE_ALLOC"
+
+
+# -- Add FIPS client to system path
+export PATH="~/ssh_fips/OpenSSH_FIPS_Client/openssl-1.0.2g/apps/:$PATH"
